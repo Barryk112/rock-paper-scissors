@@ -13,12 +13,38 @@ body {
 
 /* Game area */
 #game-area {
-    border: solid black 2px;
+    background-color: #333C7B;
+    color: whitesmoke;
+    border-radius: 10px;
     box-sizing: border-box;
     width: 85%;
     margin-left: auto;
     margin-right: auto;
     height: 65vh;
+}
+
+#player {
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#player > i {
+    font-size: 500%;
+}
+
+#computer {
+    float: right;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+#computer > i {
+    font-size: 500%;
+}
+
+i {
+    color: whitesmoke;
 }
 
 /* Buttons area */
