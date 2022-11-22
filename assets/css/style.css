@@ -2,7 +2,7 @@
 body {
     background-color: white;
     font-family: "Raleway", sans-serif;
-    color: #445361;
+    color: #333C7B;
     text-align: center;
 }
 
@@ -22,6 +22,17 @@ body {
 }
 
 /* Buttons area */
-#buttons {
+#buttons-area {
     border: solid black 2px;
+    height: 20VH;
+}
+
+.buttons {
+    background-color: #333C7B;
+    color: whitesmoke;
+    border: none;
+
+    border-radius: 30px;
+    padding: 20px;
+    margin: 50px;
 }
