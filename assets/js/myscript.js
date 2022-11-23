@@ -29,8 +29,10 @@ function runGame(playerChoice) {
     
     if (winner === "player") {
         document.getElementById("winner-text").innerText = ("You WON this round!");
+        addPlayerScore();
     } else if (winner === "computer") {
         document.getElementById("winner-text").innerText = ("You LOST this round");
+        addComputerScore();
     } else if (winner === "tie") {
         document.getElementById("winner-text").innerText = ("This round was a TIE");
     } else if (winner === "error") {
@@ -88,6 +90,31 @@ function calculateWinner(playerChoice, compChoice) {
 
 }
 
-function restScore() {
+/**
+ * Gets player score from the DOM and adds 1 to it when player wins
+ */
+function addPlayerScore() {
 
+    let oldScore = parseInt(document.getElementById("player-score").innerText);
+    document.getElementById("player-score").innerText = ++oldScore;
+
+}
+
+/**
+ * Gets computer score from the DOM and adds 1 to it when computer wins
+ */
+function addComputerScore() {
+
+    let oldScore = parseInt(document.getElementById("computer-score").innerText);
+    document.getElementById("computer-score").innerText = ++oldScore;
+
+}
+
+/**
+ * Gets both scores from the DOM and sets them both to 0
+ */
+function resetScore() {
+
+    document.getElementById("player-score").innerText = "0";
+    document.getElementById("computer-score").innerText = "0";
 }
