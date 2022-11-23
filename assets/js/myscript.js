@@ -15,14 +15,23 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
+/**
+ * Runs the game once user clicks on a Rock, Paper or Scissors button
+ */
 function runGame(playerChoice) {
+
     console.log(playerChoice);
 
-    console.log(computerChoice())
+    let compChoice = computerChoice();
+    console.log(compChoice);
+    
+    let winner = calculateWinner(playerChoice, compChoice);
+    console.log(winner);
+
 }
 
 /**
- * Creates a random rock, paper or scissors choice for the cumpter 
+ * Creates a random rock, paper or scissors choice for the computer 
  * and returns result
  */
 function computerChoice() {
@@ -37,4 +46,38 @@ function computerChoice() {
     }
 
     return compChoice;
+}
+
+/**
+ * Calculates the winner of Rock, Paper or scissors and retunes 
+ * a winner value
+ */
+function calculateWinner(playerChoice, compChoice) {
+
+    let winner;
+
+    if (playerChoice === "rock" && compChoice === "scissors") {
+        winner = "player";
+    } else if (playerChoice === "paper" && compChoice === "rock") {
+        winner = "player";
+    } else if (playerChoice === "scissors" && compChoice === "paper") {
+        winner = "player";
+    } else if (compChoice === "rock" && playerChoice === "scissors") {
+        winner = "computer";
+    } else if (compChoice === "paper" && playerChoice === "rock") {
+        winner = "computer";
+    } else if (compChoice === "scissors" && playerChoice === "paper") {
+        winner = "computer";
+    } else if (playerChoice === compChoice) {
+        winner = "tie";
+    } else {
+        winner = "error"
+    }
+
+    return winner;
+
+}
+
+function restScore() {
+
 }
