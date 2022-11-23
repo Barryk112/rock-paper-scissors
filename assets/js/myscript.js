@@ -28,11 +28,11 @@ function runGame(playerChoice) {
     let winner = calculateWinner(playerChoice, compChoice);
     
     if (winner === "player") {
-        alert("You WON this round!");
+        document.getElementById("winner-text").innerText = ("You WON this round!");
     } else if (winner === "computer") {
-        alert("You LOST this round");
+        document.getElementById("winner-text").innerText = ("You LOST this round");
     } else if (winner === "tie") {
-        alert("Its a TIE!");
+        document.getElementById("winner-text").innerText = ("This round was a TIE");
     } else if (winner === "error") {
         alert("invalid option selected");
         throw (`error ${playerChoice} is invalid!`);

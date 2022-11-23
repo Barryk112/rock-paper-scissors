@@ -24,7 +24,7 @@ body {
     margin-right: auto;
     margin-bottom: 50px;
     margin-top: 50px;
-    height: 33vh;
+    height: 40vh;
 
 }
 
@@ -50,6 +50,10 @@ body {
 
 i {
     color: whitesmoke;
+}
+
+#winner-display {
+    padding-top: 1px;
 }
 
 /* Buttons area */
