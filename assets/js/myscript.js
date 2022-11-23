@@ -26,7 +26,17 @@ function runGame(playerChoice) {
     console.log(compChoice);
     
     let winner = calculateWinner(playerChoice, compChoice);
-    console.log(winner);
+    
+    if (winner === "player") {
+        alert("You WON this round!");
+    } else if (winner === "computer") {
+        alert("You LOST this round");
+    } else if (winner === "tie") {
+        alert("Its a TIE!");
+    } else if (winner === "error") {
+        alert("invalid option selected");
+        throw (`error ${playerChoice} is invalid!`);
+    }
 
 }
 
