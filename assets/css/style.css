@@ -67,3 +67,14 @@ i {
 .buttons:hover {
     background-color: green;
 }
+
+/* Footer */
+footer {
+    background-color: #393A3E;
+    color: whitesmoke;
+
+    padding: 20px;
+    margin: none;
+
+    border-radius: 10px;
+}
