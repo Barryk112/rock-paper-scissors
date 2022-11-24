@@ -102,3 +102,35 @@ footer {
     border-radius: 10px;
 
 }
+
+@media  screen and (max-width: 550px) {
+
+    #game-area {
+        display: inline-grid;
+        height: 100%;
+    }
+
+    #player {
+        text-align: center;
+        margin: 2px;
+    }
+
+    #player > i {
+        font-size: 200%;
+    }
+
+    #computer {
+        text-align: center;
+        margin: 2px;
+    }
+
+    #computer > i {
+        font-size: 200%;
+    }
+
+    .buttons {
+        font-size: 150%;
+        margin: 10px;
+    }
+
+}
