@@ -62,7 +62,7 @@ function computerChoice() {
 
 /**
  * Calculates the winner of Rock, Paper or scissors and retunes 
- * a winner value
+ * a winner + updates player and computer icons
  */
 function calculateWinner(playerChoice, compChoice) {
 
@@ -92,7 +92,17 @@ function calculateWinner(playerChoice, compChoice) {
         updateComputerIconScissors();
         updatePlayerIconPaper();
         winner = "computer";
-    } else if (playerChoice === compChoice) {
+    } else if (playerChoice === "rock" && compChoice === "rock") {
+        updatePlayerIconRock();
+        updateComputerIconRock();
+        winner = "tie";
+    } else if (playerChoice === "paper" && compChoice === "paper") {
+        updatePlayerIconPaper();
+        updateComputerIconPaper();
+        winner = "tie";
+    } else if (playerChoice === "scissors" && compChoice === "scissors") {
+        updatePlayerIconScissors();
+        updateComputerIconScissors();
         winner = "tie";
     } else {
         winner = "error"
@@ -129,6 +139,12 @@ function resetScore() {
 
     document.getElementById("player-score").innerText = "0";
     document.getElementById("computer-score").innerText = "0";
+
+    let playerIcon =document.getElementById("player-icon");
+    playerIcon.setAttribute("class", "fa-solid fa-user");
+
+    let computerIcon =document.getElementById("computer-icon");
+    computerIcon.setAttribute("class", "fa-solid fa-computer");
 }
 
 /**
@@ -157,7 +173,6 @@ function updatePlayerIconScissors() {
     let playerIcon = document.getElementById("player-icon");
     playerIcon.setAttribute("class", "fa-solid fa-hand-scissors");
 }
-
 
 /**
  * Updates the computer icon to Rock
