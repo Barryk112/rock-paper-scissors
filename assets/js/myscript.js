@@ -69,16 +69,28 @@ function calculateWinner(playerChoice, compChoice) {
     let winner;
 
     if (playerChoice === "rock" && compChoice === "scissors") {
+        updatePlayerIconRock();
+        updateComputerIconScissors();
         winner = "player";
     } else if (playerChoice === "paper" && compChoice === "rock") {
+        updatePlayerIconPaper();
+        updateComputerIconRock();
         winner = "player";
     } else if (playerChoice === "scissors" && compChoice === "paper") {
+        updatePlayerIconScissors();
+        updateComputerIconPaper();
         winner = "player";
     } else if (compChoice === "rock" && playerChoice === "scissors") {
+        updateComputerIconRock();
+        updatePlayerIconScissors();
         winner = "computer";
     } else if (compChoice === "paper" && playerChoice === "rock") {
+        updateComputerIconPaper();
+        updatePlayerIconRock();
         winner = "computer";
     } else if (compChoice === "scissors" && playerChoice === "paper") {
+        updateComputerIconScissors();
+        updatePlayerIconPaper();
         winner = "computer";
     } else if (playerChoice === compChoice) {
         winner = "tie";
@@ -117,4 +129,59 @@ function resetScore() {
 
     document.getElementById("player-score").innerText = "0";
     document.getElementById("computer-score").innerText = "0";
+}
+
+/**
+ * Updates the player icon to Rock
+ */
+function updatePlayerIconRock() {
+
+    let playerIcon = document.getElementById("player-icon");
+    playerIcon.setAttribute("class", "fa-solid fa-hand-back-fist");
+}
+
+/**
+ * Updates the player icon to Paper
+ */
+function updatePlayerIconPaper() {
+
+    let playerIcon = document.getElementById("player-icon");
+    playerIcon.setAttribute("class", "fa-solid fa-hand");
+}
+
+/**
+ * Updates the player icon to Scissors
+ */
+function updatePlayerIconScissors() {
+
+    let playerIcon = document.getElementById("player-icon");
+    playerIcon.setAttribute("class", "fa-solid fa-hand-scissors");
+}
+
+
+/**
+ * Updates the computer icon to Rock
+ */
+function updateComputerIconRock() {
+
+    let playerIcon = document.getElementById("computer-icon");
+    playerIcon.setAttribute("class", "fa-solid fa-hand-back-fist");
+}
+
+/**
+ * Updates the computer icon to Paper
+ */
+function updateComputerIconPaper() {
+
+    let playerIcon = document.getElementById("computer-icon");
+    playerIcon.setAttribute("class", "fa-solid fa-hand");
+}
+
+/**
+ * Updates the computer icon to Scissors
+ */
+function updateComputerIconScissors() {
+
+    let playerIcon = document.getElementById("computer-icon");
+    playerIcon.setAttribute("class", "fa-solid fa-hand-scissors");
 }
