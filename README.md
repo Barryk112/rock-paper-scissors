@@ -78,6 +78,8 @@ R.P.S The Game is a simple game of Rock, Paper, Scissors you can play when you h
   - No errors were returned when passing through the official W3C validator.
 - CSS
   - No errors were found when passing through the official W3C CSS validator.
+- JS
+  - No errors were found when passing through the official jshint validator.
 - WebDev score
     - Score was given by official [Webdev](https://web.dev/measure/?gclid=CjwKCAjw-rOaBhA9EiwAUkLV4pZbeEVqP9vuP4NPNqvQs7TVgbh62-3Yyva7M_aGi5DsBzNf4GFicxoC6mYQAvD_BwE&url=https%3A%2F%2Fbarryk112.github.io%2Fdog-day-care%2F)
 ![Webdev score](assets/images/webdev-score.png)
